@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "id": "lj-c-hspeed-holdw",
+ "notes": "C: same initial state as B (v_h=250 along -Z, clamp off), but W held the entire run. Air wishdir = forward, wishspeed capped to 30 u/s; deadstrafe factor 0.25 applies inside airAccelerate while vel.y in [0,140]. Tick 0 has no J (see B's gotcha note); J+J held from tick 1 on. Expected: small extra gain along -Z only, no lateral drift.",
+ "settings": {
+  "autobhop": true,
+  "bhopSpeedClamp": false,
+  "noPrestrafe": true,
+  "airAccelerate": 100,
+  "runSpeed": 250,
+  "stamina": {
+   "enabled": false
+  },
+  "perf": {
+   "enabled": false
+  }
+ },
+ "timestep": {
+  "hz": 128,
+  "mode": "fixed-tick"
+ },
+ "settle": {
+  "ticks": 64
+ },
+ "geometry": {
+  "brushes": [
+   {
+    "kind": "aabb",
+    "min": [
+     -8192,
+     -64,
+     -8192
+    ],
+    "max": [
+     8192,
+     0,
+     8192
+    ]
+   }
+  ]
+ },
+ "state": {
+  "position": [
+   0,
+   0.03125,
+   0
+  ],
+  "velocity": [
+   0,
+   0,
+   -250
+  ],
+  "yaw": 0,
+  "jumpHeldBefore": false
+ },
+ "ticks": [
+  {
+   "keys": "W"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  },
+  {
+   "keys": "WJ"
+  }
+ ],
+ "finish": {
+  "requireLanding": true
+ }
+}

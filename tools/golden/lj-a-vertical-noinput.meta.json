@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "libVersion": "0.1.0",
+    "node": "v20.20.2",
+    "note": "identity verified ONLY in this environment class; cross-platform bit-exactness is NOT claimed",
+    "platform": "linux/x64",
+    "sourceCommit": "ba4875a85d8f45bcbb4bb6ddcf54b1383c3d8083"
+  },
+  "goldenSha256": "78986c2bafd842afeac82d612d3c4c27c63d2e4d4009b8a0d8e3286802b3a0f1",
+  "sceneFile": "tools/scenes/lj-a-vertical-noinput.json"
+}

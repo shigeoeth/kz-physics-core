@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "id": "lj-a-vertical-noinput",
+ "notes": "A: standing vertical jump, ZERO horizontal input for the whole run. Spawn exactly at rest on the floor (y=0.03125 is where walkMove/stayOnGround parks the origin after the DIST_EPSILON snap; settle loop confirms grounding in 1 tick). J pressed on scripted tick 1 (fresh press, oldJump=false). Measures impulse, apex, flight time.",
+ "settings": {
+  "autobhop": true,
+  "bhopSpeedClamp": true,
+  "noPrestrafe": true,
+  "airAccelerate": 100,
+  "runSpeed": 250,
+  "stamina": {
+   "enabled": false
+  },
+  "perf": {
+   "enabled": false
+  }
+ },
+ "timestep": {
+  "hz": 128,
+  "mode": "fixed-tick"
+ },
+ "settle": {
+  "ticks": 64
+ },
+ "geometry": {
+  "brushes": [
+   {
+    "kind": "aabb",
+    "min": [
+     -8192,
+     -64,
+     -8192
+    ],
+    "max": [
+     8192,
+     0,
+     8192
+    ]
+   }
+  ]
+ },
+ "state": {
+  "position": [
+   0,
+   0.03125,
+   0
+  ],
+  "velocity": [
+   0,
+   0,
+   0
+  ],
+  "yaw": 0,
+  "jumpHeldBefore": false
+ },
+ "ticks": [
+  {
+   "keys": ""
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  }
+ ],
+ "finish": {
+  "requireLanding": true
+ }
+}
