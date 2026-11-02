@@ -66,3 +66,33 @@ apex, dist отдельными полями.
 Документы — новые untracked файлы: удалить их (`rm movement-spec.md
 source-provenance.md migration-plan.md handoff.md`) — код не менялся вовсе;
 `dist/` собран из неизменного src (в .gitignore).
+
+## Инцидент PR #1 (2026-11-03) — зафиксировано, исправление НЕ выполнено
+
+Ветка `qwen-code-64f29ff5-...` → main, PR #1 в shigeoeth/kz-physics-core.
+Ничего не сливать. Проверено `git diff --name-status/--numstat main..HEAD`:
+
+- Файлов в диффе: 1032 = 1031 A + 1 M.
+- src/, tests/*, package.json, package-lock.json, README/LICENSE/NOTICE — БЕЗ изменений
+  (`git diff main..HEAD -- src` пустой; тесты живут в src/**/*.test.ts на main).
+- node_modules/: 908 файлов (+704 754 строки; 46 пакетов dev-dependencies,
+  включая артефакт vitest-кэша node_modules/.vite/.../results.json).
+- dist/: 106 файлов (+2 820 строк; сгенерированный tsc-выход 53 .js + 53 .d.ts).
+- tools/: 13 файлов (+11 002 строки) — целевое содержимое этапа harness.
+- Документы: 4 .md (+369 строк) — целевое содержимое аудита.
+- Единственный M — .gitignore: удалены правила `node_modules` и `dist`,
+  добавлено `sim-output/`.
+- Причина: при подготовке второго коммита из .gitignore убрали правила для
+  node_modules/dist (намерение — игнорировать только локальные прогоны), после
+  чего общий `git add` затянул весь untracked контент. Нарушено правило
+  «не добавлять node_modules и архивы в коммиты».
+- Побочный эффект: CI publish.yml (`npm ci` → `npm test`) упадёт на двух
+  известных baseline-тестах (AirAccelerate, WalkMove) — независимо от этого инцидента.
+- Золотые проверки harness проходят на текущем окружении
+  (`node tools/sim-scene.mjs --check-golden` → 4×OK, exit 0).
+
+План исправления (ЖДУТ ЯВНОГО СОГЛАСОВАНИЯ; destructive операции не выполнены):
+1. Вернуть в .gitignore строки `node_modules/` и `dist/` (оставить `sim-output/`).
+2. `git rm -r --cached node_modules dist` — удаление из индекса, файлы на диске остаются.
+3. Обычный commit поверх текущей истории (без rebase/force push) → PR сожмётся до ~22 файлов.
+   Альтернатива «чистая история через force push» — только по отдельному согласованию.
