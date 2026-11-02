@@ -96,3 +96,24 @@ source-provenance.md migration-plan.md handoff.md`) — код не менялс
 2. `git rm -r --cached node_modules dist` — удаление из индекса, файлы на диске остаются.
 3. Обычный commit поверх текущей истории (без rebase/force push) → PR сожмётся до ~22 файлов.
    Альтернатива «чистая история через force push» — только по отдельному согласованию.
+
+## 2026-11-03 (уточнение к аудиту PR — повторная проверка фактического состояния)
+- Ветка содержит 4 snapshot-коммита (ba4875a, baca67d, 1a65731, 65bf2f0); «2 commits» в PR —
+  следствие squash на GitHub. Проверено git log main..HEAD.
+- ИТОГОВЫЙ net-diff main...HEAD = 18 файлов: 17 новых (4 документа + tools/sim-scene.mjs +
+  4 сцены + 4 golden + 4 golden .meta.json) + изменённый .gitignore. Подтверждено
+  git diff --name-status main...HEAD.
+- node_modules/ и dist/ в итоговом diff: 0 файлов (git ls-tree HEAD dist/ node_modules/ пусто).
+- src/, tests/*, package.json относительно main: НЕ ИЗМЕНЕНЫ (git diff main...HEAD -- src/ пуст).
+- .gitignore в HEAD уже содержит node_modules, dist, sim-output/ — правила восстановления не
+  потребовались; cleanup-коммит (вариант А) не нужен: финальный снапшот сам даёт чистый итог.
+  История не переписывалась, destructive команды не выполнялись.
+- Уточнение подсчёта: ранее «22 файла» = 18 файлов net-diff + dist/index.d.ts + dist/index.js
+  + package-lock.json (эти три в текущем HEAD/diff ОТСУТСТВУЮТ). Фактически нужных в PR сейчас:
+  18, включая .gitignore (17 + .gitignore, а не 22+1).
+- Повторные проверки: node tools/sim-scene.mjs --check-golden → OK 4/4; все 4 сцены RUN OK;
+  детерминизм: двойной прогон lj-a → идентичные history.json (sha256 78986c2b…);
+  npx vitest run → 70 passed / 2 failed — те же два baseline-падения (AirAccelerate uncapped
+  wishspeed 5.859 vs 23.4375; WalkMove noPrestrafe peak 255.92 vs >300), ожидания не менялись.
+- Remote в среде отсутствует (git remote -v пуст) → push/Publish из этой среды невозможен;
+  PR #1 обновится только при публикации актуального состояния ветки из вашего окружения.
