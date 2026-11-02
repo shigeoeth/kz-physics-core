@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "id": "lj-b-hspeed-noairinput",
+ "notes": "B: pure BALLISTIC flight \u2014 given horizontal velocity 250 u/s along yaw-forward (-Z), NO air input during the flight. bhopSpeedClamp DISABLED on purpose: with it on, checkJump would clamp takeoff to 1.1*maxspeed and mix two mechanisms into one measurement. GOTCHA found while building this harness: if J is held already on the FIRST grounded tick, checkJump fires inside the same tick before categorizePosition ever set onGround=true, so the player never leaves the ground that tick (and the harness's settle loop would spin). Fix encoded here: scripted tick 0 has NO keys (lands/grounds the player), J starts tick 1. Expected physics: constant v_h=250; distance = 250 * flight_time.",
+ "settings": {
+  "autobhop": true,
+  "bhopSpeedClamp": false,
+  "noPrestrafe": true,
+  "airAccelerate": 100,
+  "runSpeed": 250,
+  "stamina": {
+   "enabled": false
+  },
+  "perf": {
+   "enabled": false
+  }
+ },
+ "timestep": {
+  "hz": 128,
+  "mode": "fixed-tick"
+ },
+ "settle": {
+  "ticks": 64
+ },
+ "geometry": {
+  "brushes": [
+   {
+    "kind": "aabb",
+    "min": [
+     -8192,
+     -64,
+     -8192
+    ],
+    "max": [
+     8192,
+     0,
+     8192
+    ]
+   }
+  ]
+ },
+ "state": {
+  "position": [
+   0,
+   0.03125,
+   0
+  ],
+  "velocity": [
+   0,
+   0,
+   -250
+  ],
+  "yaw": 0,
+  "jumpHeldBefore": false
+ },
+ "ticks": [
+  {
+   "keys": ""
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  },
+  {
+   "keys": "J"
+  }
+ ],
+ "finish": {
+  "requireLanding": true
+ }
+}
